@@ -23,3 +23,33 @@ y en la otra
 ```
 python victim.py
 ```
+
+4. Reiniciar entorno
+   Para poder correr varias veces, se tiene la carpeta backup, donde se ubican archivos a encriptar.
+   De esta forma se puede tranquilamente probar el codigo varias veces sin tener que volver a manualmente ubicar los archivos en su lugar y borrar las encriptaciones.
+
+ejecutar reset.sh
+
+```
+./reset.sh
+```
+
+## Diagrama de Flujo
+
+## Capturas
+
+## Reflexion
+
+Preguntas de reflexión. Además de la simulación, respondan en un documento:
+
+1.  Como atacante: ¿qué estrategias usaría para lograr que la víctima instale el ransom
+    ware (paso 1)? Discútalo en términos teóricos (phishing, ingeniería social, etc.), sin
+    implementar nada.
+
+2.  ¿Qué otros canales podría usarse en el paso 2 (intercambio de claves) para evitar
+    sospechas? Ejemplo: un canal encubierto en tráfico ICMP. Describa el concepto, no
+    su implementación.
+
+3.  Como defensor: ¿qué políticas y prácticas de seguridad (copias de seguridad, seg
+    mentación, monitoreo, hardening, concientización) mitigarían la ocurrencia de este
+    tipo de ataques?
