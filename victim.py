@@ -41,13 +41,13 @@ with open('sample_cipher/ransom_note.txt', 'w', encoding='utf-8') as f:
     f.write("\nPara recuperarlos, paga al atacante.\n")
 
 print(f"🔒 {len(encrypted_files)} archivos cifrados")
-print("❌ Archivos bloqueados.\n")
+print("❌ Archivos bloqueados (verifica en /sample_cipher).\n")
 
 # BORRAR claves de memoria
 del s, K, sk
 
 # Mostrar opcion para "pagar"
-input("Presiona ENTER para 'pagar' y recuperar archivos...")
+input("Presiona ENTER para 'pagar' y recuperar los archivos...")
 
 print("\n=== FASE DE RECUPERACIÓN ===")
 print("💸 Pagando al atacante...")
@@ -63,4 +63,4 @@ K_recovery = derive_key_from_secret(s_received)
 crypto_recovery = FileCrypto(K_recovery)
 decrypted_files = crypto_recovery.decrypt_directory('sample_cipher', 'sample_plain')
 
-print(f"✅ {len(decrypted_files)} archivos recuperados en lab/sample_plain/")
+print(f"✅ {len(decrypted_files)} archivos recuperados a /sample_plain")
