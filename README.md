@@ -36,7 +36,24 @@ ejecutar reset.sh
 
 ## Diagrama de Flujo
 
+![diagrama](/img/Modelo%20A.png)
+
 ## Capturas
+
+### Pre-Ataque
+
+Aquí se pueden ver los archivos cruciales para la victima, especialmente el primero.
+![Pre-Ataque](/img/preAtaque.png)
+
+### Ataque
+
+Tras la encripción se pierde acceso a los archivos y se tiene una nota pidiendo un pago
+![Ataque](/img/Ataque.png)
+
+### Recuperación
+
+Tras el 'pago', los archivos están disponibles de nuevo
+![Recuperacion](/img/postPago.png)
 
 ## Reflexion
 

@@ -173,6 +173,18 @@ class FileCrypto:
 
 
 def derive_key_from_secret(s: int, salt: bytes = b'ransomware_salt_2025') -> bytes:
-    """KDF: Deriva una clave AES de 32 bytes desde el secreto 's'"""
+    """
+     KDF: Deriva una clave AES de 32 bytes desde el secreto 's'
+    
+    Utiliza scrypt como función de derivación de claves.
+    scrypt es una KDF resistente a ataques de fuerza bruta que transforma
+    el secreto compartido en una clave simétrica válida para AES-256.
+    
+    Parámetros:
+    - N=2**14: Factor de costo computacional
+    - r=8, p=1: Parámetros de memoria/paralelización
+    - salt: Valor fijo que ambas partes conocen para derivar la misma clave
+    
+    """
     s_bytes = str(s).encode('utf-8')
     return scrypt(s_bytes, salt, key_len=32, N=2**14, r=8, p=1)

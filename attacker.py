@@ -6,6 +6,7 @@ from rsa_crypto import RSA
 HOST = '127.0.0.1'
 PORT = 65432
 
+# Instancia objeto para usar RSA
 rsa = RSA()
 
 print("=== ATACANTE - FASE DE ATAQUE ===")
@@ -25,6 +26,7 @@ print(f"✓ Clave pública recibida")
 # Generar y cifrar secreto 's'
 (n, e) = pk
 s = random.randint(1, n-1)
+# encriptar como 'c'
 c = pow(s, e, n)
 print(f"✓ Secreto 's' generado y GUARDADO: {s}")
 
